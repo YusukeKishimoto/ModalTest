@@ -18,7 +18,6 @@
         });
     });
     </script>
-
     <style type="text/css">
     /**
     * Simple fade transition,
@@ -54,7 +53,6 @@
         opacity: 0;
     }
     </style>
-    
     <style type="text/css">
     .widthFixedContent {
         width: 100%;
@@ -77,6 +75,28 @@
         margin-top: 10px;
     }
 
+    .popup-iframe img {
+        filter: grayscale(50%) brightness(60%);
+        transition: all .25s;
+    }
+
+    /*
+    after要素で再生アイコン表示したかったけど無理でした
+    .popup-iframe:after {
+        background: url(image/black.png) no-repeat;
+        content: '';
+        height: 200px;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        width: 200px;
+    }
+    */
+
+    .popup-iframe img:hover {
+        filter: grayscale(0%) brightness(100%);
+    }
+
     .txtCenter {
         text-align: center;
     }
@@ -90,11 +110,11 @@
 <body>
     <div class="bg-image">
         <div class="widthFixedContent txtCenter">
-            <a class="popup-iframe" href="https://www.youtube.com/watch?v=5WjoFD5Xdqk">Open YouTube video</a>
-            <br>
             <div class="mt10">
+                <!--
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/5WjoFD5Xdqk" class="u-iframe" allowfullscreen="">
-                </iframe>
+                </iframe>-->
+                <a class="popup-iframe" href="https://www.youtube.com/watch?v=5WjoFD5Xdqk?autoplay=1&amp;showinfo=0&amp;rel=0"><img src="http://i.ytimg.com/vi/5WjoFD5Xdqk/maxresdefault.jpg" width="560" height="315"></a>
             </div>
             <div class="mt10">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/uF539YJ2QiQ" class="u-iframe" allowfullscreen="">
